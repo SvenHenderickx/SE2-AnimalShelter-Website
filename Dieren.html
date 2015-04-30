@@ -53,7 +53,7 @@
 <input type="radio" name="diersoort" checked>Hond
 <input type="radio" name="diersoort">Kat<br>
   <label for="naam">Naam</label>
-  <input type="text" id="naam" onfocus=""/><p id="verplicht">Dit veld is verplicht.</p>
+  <input type="text" id="naam" onfocus="$('#verplicht').fadeIn(200);"/ onBlur="$('#verplicht').fadeOut(200);"><p id="verplicht">&nbsp;Dit veld is verplicht.</p>
   <br><br>
   <label for="leeftijd">Leeftijd</label>
   <input type="text" id="leeftijd" />

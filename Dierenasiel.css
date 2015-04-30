@@ -60,10 +60,11 @@ input{
 	cursor:pointer;
 }
 
-p{
-	display:inline-block;
+#verplicht{
+	display:none;
 }
 
-.hidden{
-	visibility:hidden;
+p{
+	display:inline-block;
+	margin:0px;
 }
