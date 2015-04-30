@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="Dierenasiel.css" rel="stylesheet">
+<title>Dierenasiel - Dieren</title>
+</head>
+
+<script type="text/javascript" src="Dierenasiel.js"></script>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<body>
+<div id = "Homeknop" onClick="window.location.href = 'Index.html'">
+</div>
+<p><a href="Dieren.html#Hondentabel" id="navi">Honden</a> <a href="Dieren.html#Kattentabel" id="navi">Katten</a></p>
+<h2 id="Hondentabel">Informatie over alle honden</h1>
+<p>Hier vindt u informatie over al onze honden.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Naam</th><th>Leeftijd</th><th>Reg. Nr.</th><th>Gereserveerd</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><b>Hendrik</b></td><td>6</td><td>42531</td><td>Nee</td>
+  </tr>
+  <tr>
+  <td><b>Barrie</b></td><td>4</td><td>14235</td><td>Nee</td>
+  </tr>
+  </tbody>
+</table>
+<h2 id="Kattentabel">Informatie over alle katten</h2>
+<p>Hier vindt u informatie over al onze katten.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Naam</th><th>Leeftijd</th><th>Reg. Nr.</th><th>Gereserveerd</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><b>Swiebel</b></td><td>1</td><td>23154</td><td>Nee</td>
+  </tr>
+  <tr>
+  <td><b>Garfield</b></td><td>3</td><td>32415</td><td>Nee</td>
+  </tr>
+  </tbody>
+</table><br>
+<h2>Nieuw dier toevoegen</h2>
+<form>
+<input type="radio" name="diersoort" checked>Hond
+<input type="radio" name="diersoort">Kat<br>
+  <label for="naam">Naam</label>
+  <input type="text" id="naam" />
+  <br><br>
+  <label for="leeftijd">Leeftijd</label>
+  <input type="text" id="leeftijd" />
+  <br><br>
+  <label for="regnummer">Registratienummer</label>
+  <input type="text" id="regnummer" />
+  <br><br>
+
+  <input type="submit" value="Toevoegen" id="Toevoegknop"/>
+</form>
+
+
+</body>
+</html>
