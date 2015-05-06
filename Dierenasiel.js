@@ -1,7 +1,10 @@
-function OnReady() {
-  console.log('Pagina geladen, DOM klaar voor gebruik.');
+function codeAddress() {
+	var hond = localStorage.getItem('hond');
+	var kat = localStorage.getItem('kat');
+    alert(hond + ' ' + kat);
 }
-$(document).ready(OnReady);
+
+window.onload = codeAddress;
 
 function validateForm() {
     var x = document.forms["myForm"]["naam"].value;
@@ -12,4 +15,22 @@ function validateForm() {
         alert("Naam is verplicht, leeftijd moet 0 of hoger zijn en registratienummer moet met een 0 beginnen!");
         return false;
     }
+	else{
+		
+		var animal = {
+  		'species':  $('#diersoort').val(),
+  		'name':     $('#naam').val(),
+  		'age':      $('#leeftijd').val(),
+  		'regnr':    $('#regnummer').val(),
+  		'reserved': false
+		};
+		if($('#diersoort').val() == 'Hond'){
+			var hond = JSON.stringify(animal);
+			localStorage.setItem('hond',hond);
+		}
+		else{
+			var kat = JSON.stringify(animal);
+			localStorage.setItem('kat',kat);
+		}
+	}
 }

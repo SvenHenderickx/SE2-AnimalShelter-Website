@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link href="Dierenasiel.css" rel="stylesheet">
-<title>Dierenasiel - Dieren</title>
+<title>Dierenasiel - Overzicht</title>
 </head>
 
 <script type="text/javascript" src="Dierenasiel.js"></script>
@@ -50,8 +50,8 @@
 </table><br>
 <h2>Nieuw dier toevoegen</h2>
 <form name="myForm" onsubmit="return validateForm()">
-<input type="radio" name="diersoort" checked>Hond
-<input type="radio" name="diersoort">Kat<br>
+<input type="radio" id="diersoort" name="diersoort" checked value="Hond">Hond
+<input type="radio" id="diersoort" name="diersoort" value="Kat">Kat<br>
   <label for="naam">Naam</label>
   <input type="text" id="naam" onfocus="$('#verplicht').fadeIn(200);"/ onBlur="$('#verplicht').fadeOut(200);"><p id="verplicht">&nbsp;Dit veld is verplicht.</p>
   <br><br>
