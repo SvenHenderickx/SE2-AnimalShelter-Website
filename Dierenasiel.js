@@ -1,7 +1,13 @@
 function codeAddress() {
 	var hond = localStorage.getItem('hond');
 	var kat = localStorage.getItem('kat');
-    alert(hond + ' ' + kat);
+    
+	if(hond == null && kat == null){
+		
+	}
+	else{
+		alert(hond + ' ' + kat);
+	}
 }
 
 window.onload = codeAddress;
@@ -16,19 +22,25 @@ function validateForm() {
         return false;
     }
 	else{
-		
+		var soort;
+		if(document.getElementById("diersoorthond").checked == true){
+			soort = 'hond';
+		}
+		else if(document.getElementById("diersoorthond").checked == false){
+			soort = 'kat';
+		}
 		var animal = {
-  		'species':  $('#diersoort').val(),
+  		'species':  soort,
   		'name':     $('#naam').val(),
   		'age':      $('#leeftijd').val(),
   		'regnr':    $('#regnummer').val(),
   		'reserved': false
 		};
-		if($('#diersoort').val() == 'Hond'){
+		if(soort == 'hond'){
 			var hond = JSON.stringify(animal);
 			localStorage.setItem('hond',hond);
 		}
-		else{
+		else if(soort == 'kat'){
 			var kat = JSON.stringify(animal);
 			localStorage.setItem('kat',kat);
 		}
